@@ -158,8 +158,8 @@ namespace modeling_demos
 
             if (schema >= 1 & schema <= 4)
             {
-                ThroughputProperties throughputProperties = ThroughputProperties.CreateAutoscaleThroughput(4000);
-                Database cosmosDatabase = await cosmosDBClient.CreateDatabaseAsync(database, throughputProperties);
+          
+                Database cosmosDatabase = await cosmosDBClient.CreateDatabaseAsync(database);
                 Console.WriteLine($"  {cosmosDatabase.Id} created");
                 foreach (var ContainerSchema in DatabaseSchema[schema])
                 {
